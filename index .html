@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPT-109 Assignment-1: Comprehensive Solutions & Assessment Questions</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #f3f4f6;
+            --text-color: #1f2937;
+            --border-color: #e5e7eb;
+            --card-bg: #ffffff;
+            --highlight-bg: #eff6ff;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-color);
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: space-between;
+            color: #4b5563;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .syllabus-box {
+            background: var(--highlight-bg);
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .syllabus-box h3 {
+            margin: 0 0 8px 0;
+            color: var(--primary-color);
+        }
+
+        .syllabus-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 25px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        /* Diagrams / Visual Blocks */
+        .diagram-container {
+            background: #fdfdfd;
+            border: 2px dashed var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .diagram-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .diagram-box {
+            display: inline-block;
+            background: #e0f2fe;
+            border: 1px solid #7dd3fc;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 5px;
+            font-size: 0.9rem;
+            color: #0369a1;
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .question-block {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .bloom-badge {
+            background: var(--highlight-bg);
+            color: var(--secondary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>BPT-109 Assignment-1: Comprehensive Solutions</h1>
+        <div class="meta-info">
+            <span><strong>Course:</strong> Computer Fundamentals</span>
+            <span><strong>Submission Date:</strong> 13-Oct-2026</span>
+        </div>
+        <div class="syllabus-box">
+            <h3>Syllabus Modules Covered:</h3>
+            <ul>
+                <li><strong>Unit 1: Introduction to Computer</strong> — Characteristics, block diagram, computer generations, and computer languages[cite: 5].</li>
+                <li><strong>Unit 2: Input & Output Devices</strong> — Keyboard, point & draw devices, scanning devices, digitizers, card readers, voice recognition, vision-input devices, monitors, plotters, screen image projectors, and voice response systems[cite: 5].</li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- SECTION 1: ASSESSMENT QUESTIONS OVERVIEW -->
+    <section>
+        <h2>Assessment Questions Overview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Q. No. & Level</th>
+                    <th>Bloom's Keyword & Focus</th>
+                    <th>Question Statement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Question 1</strong><br><small>Remembering (Knowledge)</small></td>
+                    <td><strong>Keywords:</strong> List, Identify<br><small>Computer characteristics & hardware across generations</small></td>
+                    <td>List four primary characteristics of a modern digital computer and identify the key hardware technology associated with each of the five generations of computers[cite: 1, 5].</td>
+                </tr>
+                <tr>
+                    <td><strong>Question 2</strong><br><small>Understanding (Comprehension)</small></td>
+                    <td><strong>Keywords:</strong> Explain<br><small>Block diagram of computer & system architecture</small></td>
+                    <td>Explain the flow of data, instructions, and control signals within the functional block diagram of a computer, detailing the interaction between the CPU, memory unit, and I/O interface[cite: 1, 5].</td>
+                </tr>
+                <tr>
+                    <td><strong>Question 3</strong><br><small>Applying (Application)</small></td>
+                    <td><strong>Keywords:</strong> Demonstrate<br><small>Real-world implementation of scanning and card reading hardware</small></td>
+                    <td>Demonstrate how optical data scanning devices (e.g., barcode/OMR scanners) and electronic card readers (e.g., RFID/smart card readers) can be deployed in a campus environment to automate student attendance and library checkouts[cite: 2, 5].</td>
+                </tr>
+                <tr>
+                    <td><strong>Question 4</strong><br><small>Analyzing (Analysis)</small></td>
+                    <td><strong>Keywords:</strong> Distinguish<br><small>Comparative breakdown of computer language categories</small></td>
+                    <td>Distinguish between low-level languages (Machine and Assembly) and high-level languages in terms of execution speed, hardware dependence, translation requirements, and programming complexity[cite: 2, 5].</td>
+                </tr>
+                <tr>
+                    <td><strong>Question 5</strong><br><small>Analyzing (Analysis)</small></td>
+                    <td><strong>Keywords:</strong> Compare<br><small>Input precision & operational mechanisms</small></td>
+                    <td>Compare point-and-draw devices (such as a mouse and trackball) with graphics digitizers/drawing tablets, highlighting how their coordinate tracking mechanisms and pressure sensitivity differ for CAD and digital art applications[cite: 3, 5].</td>
+                </tr>
+                <tr>
+                    <td><strong>Question 6</strong><br><small>Evaluating (Evaluation)</small></td>
+                    <td><strong>Keywords:</strong> Assess, Justify<br><small>Technical trade-offs between specialized output systems</small></td>
+                    <td>Assess whether a drum/flatbed plotter or an ultra-high-definition monitor and large-format printer combination is superior for producing civil engineering blueprints, justifying your selection based on line resolution, scalability, and long-term production costs[cite: 3, 5].</td>
+                </tr>
+                <tr>
+                    <td><strong>Question 7</strong><br><small>Evaluating (Evaluation)</small></td>
+                    <td><strong>Keywords:</strong> Critique<br><small>Critical analysis of sensory input devices under adverse conditions</small></td>
+                    <td>Critique the operational reliability and security vulnerabilities of vision-input devices (facial recognition) compared to voice recognition devices when deployed as primary biometric authentication tools in high-ambient-noise, publicly exposed environments[cite: 4, 5].</td>
+                </tr>
+                <tr>
+                    <td><strong>Question 8</strong><br><small>Creating (Synthesis)</small></td>
+                    <td><strong>Keywords:</strong> Design<br><small>System design and assistive technology synthesis</small></td>
+                    <td>Design an accessible, hands-free computer workstation tailored for a visually impaired user. Propose a coherent integration of non-visual input devices (such as voice recognition systems and tactile keyboards) with specialized output devices (such as voice response synthesizers and screen readers)[cite: 4, 5].</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- SECTION 2: DETAILED SOLUTIONS -->
+    <section>
+        <h2>Detailed Solutions & Explanations</h2>
+
+        <!-- Question 1 Solution -->
+        <div class="question-block">
+            <div class="question-header">
+                <span class="question-title">Solution 1: Digital Computer Characteristics & Hardware Generations</span>
+                <span class="bloom-badge">KNOWLEDGE / REMEMBERING</span>
+            </div>
+            <h3>Primary Characteristics of Modern Digital Computers:</h3>
+            <ul>
+                <li><strong>High Speed:</strong> Processes instructions at nanosecond/picosecond levels, performing billions of calculations per second (FLOPS)[cite: 1].</li>
+                <li><strong>Accuracy & Reliability:</strong> Delivers error-free outcomes based on the Garbage In, Garbage Out (GIGO) principle with deterministic precision[cite: 1].</li>
+                <li><strong>Diligence:</strong> Operates continuously without exhaustion, operational fatigue, or degradation in performance speed/accuracy[cite: 1].</li>
+                <li><strong>Versatility & Storage:</strong> Executes diverse operations ranging from complex numerical analysis to multimedia rendering, backed by massive non-volatile memory hierarchy[cite: 1].</li>
+            </ul>
+
+            <h3>Evolution of Computer Hardware Across Five Generations:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gen</th>
+                        <th>Timeline</th>
+                        <th>Core Hardware Technology</th>
+                        <th>Primary Storage Medium</th>
+                        <th>Key Characteristics & Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st</td>
+                        <td>1940-1956</td>
+                        <td>Vacuum Tubes / Thermionic Valves</td>
+                        <td>Magnetic Drums</td>
+                        <td>Huge size, high heat generation, machine language (ENIAC, UNIVAC)[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td>2nd</td>
+                        <td>1956-1963</td>
+                        <td>Transistors (Semiconductor Junctions)</td>
+                        <td>Magnetic Core Memory</td>
+                        <td>Smaller, faster, energy-efficient; introduced assembly language (IBM 7090)[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td>3rd</td>
+                        <td>1964-1971</td>
+                        <td>Integrated Circuits (ICs - SSI & MSI)</td>
+                        <td>Magnetic Disk / Core</td>
+                        <td>Time-sharing OS, keyboard/monitor interfaces (IBM System/360)[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td>4th</td>
+                        <td>1971-Present</td>
+                        <td>Microprocessors (VLSI & ULSI Chips)</td>
+                        <td>Semiconductor RAM / SSD</td>
+                        <td>Personal Computers, microcomputers, network interconnectivity (PC, Macs)[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td>5th</td>
+                        <td>Present-Future</td>
+                        <td>Artificial Intelligence & Quantum Logic</td>
+                        <td>Ultra-high Density Flash / Optical</td>
+                        <td>Parallel processing, neural networks, natural language comprehension[cite: 1].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Question 2 Solution -->
+        <div class="question-block">
+            <div class="question-header">
+                <span class="question-title">Solution 2: Functional Block Diagram & System Interconnections</span>
+                <span class="bloom-badge">COMPREHENSION / UNDERSTANDING</span>
+            </div>
+            <p>Explain the flow of data, instructions, and control signals within the functional block diagram of a computer, detailing the interaction between the CPU, memory unit, and I/O interface[cite: 1].</p>
+            
+            <div class="diagram-container">
+                <div class="diagram-title">Figure 1.1: Functional Flow of Data, Instructions, and Control Signals in a Computer System[cite: 1]</div>
+                <div class="diagram-box">INPUT DEVICES</div>
+                <span style="font-weight: bold; color: var(--secondary-color);">➞</span>
+                <div style="display: inline-block; border: 1px dashed #333; padding: 10px; margin: 5px; background: #fff;">
+                    <div style="font-size: 0.8rem; font-weight: bold; margin-bottom: 5px;">CENTRAL PROCESSING UNIT (CPU)</div>
+                    <div class="diagram-box">Control Unit (CU)<br><small>Decodes & Coordinates</small></div>
+                    <div class="diagram-box">ALU<br><small>Arithmetic & Logic</small></div><br>
+                    <div class="diagram-box" style="width: 85%;">Internal CPU Registers (PC, MAR, MDR, ACC)</div>
+                </div>
+                <span style="font-weight: bold; color: var(--secondary-color);">➞</span>
+                <div class="diagram-box">OUTPUT DEVICES</div>
+            </div>
+
+            <h3>System Interconnections & Flow Dynamics:</h3>
+            <ul>
+                <li><strong>Data & Instruction Flow:</strong> Raw data enters via Input Devices, buffered by the I/O Interface into RAM. The CPU fetches instructions from RAM into the Instruction Register (IR) via the System Bus[cite: 1].</li>
+                <li><strong>Control Signal Distribution:</strong> The Control Unit (CU) interprets instruction opcodes and emits timed electrical pulses (control signals) along the Control Bus to orchestrate memory reads/writes and ALU operations[cite: 1].</li>
+                <li><strong>ALU & Memory Interaction:</strong> Operands are loaded into internal CPU registers (Accumulator). The ALU executes logical/arithmetic functions and routes results back to Primary Memory before being dispatched to Output Devices[cite: 1].</li>
+            </ul>
+        </div>
+
+        <!-- Question 3 Solution -->
+        <div class="question-block">
+            <div class="question-header">
+                <span class="question-title">Solution 3: Smart Campus Automation via Scanning & RFID Devices</span>
+                <span class="bloom-badge">APPLICATION / APPLYING</span>
+            </div>
+            <p>Demonstrate how optical data scanning devices and electronic card readers can be deployed in a campus environment to automate student attendance and library checkouts[cite: 2].</p>
+            <p>An integrated smart campus relies on a dual-framework deployment of optical and radio-frequency identification devices connected to a centralized Student Information System (SIS)[cite: 2].</p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Figure 3.1: Campus-Wide Deployment Topology for Scanning and Card Reader Infrastructure[cite: 2]</div>
+                <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <div class="diagram-box">Student ID<br><small>RFID / Barcode</small></div>
+                    <div>
+                        <div class="diagram-box" style="background:#fee2e2; border-color:#fca5a5; color:#991b1b;">Lecture Hall Entrance<br><small>OMR / Optical Barcode</small></div><br>
+                        <div class="diagram-box" style="background:#e0f2fe; border-color:#7dd3fc; color:#0369a1;">Library Kiosk / Turnstile<br><small>13.56 MHz RFID / Smart Card</small></div>
+                    </div>
+                    <div class="diagram-box" style="background:#f3e8ff; border-color:#d8b4fe; color:#6b21a8;">IoT Gateway<br><small>Authentication API</small></div>
+                    <div class="diagram-box" style="background:#dcfce7; border-color:#86efac; color:#166534;">Centralized SIS<br><small>Attendance Ledger & Library Catalog</small></div>
+                </div>
+            </div>
+
+            <h3>Deployment Scenarios:</h3>
+            <ul>
+                <li><strong>Automated Attendance Tracking:</strong> Classroom entryways are fitted with wall-mounted RFID/Barcode scanners. Students tap their smart cards upon entry. The high-frequency (13.56 MHz) RFID reader captures the encrypted Unique Identifier (UID), transmitting a real-time HTTP payload to the server to update the attendance database, completely bypassing manual roll calls[cite: 2].</li>
+                <li><strong>Self-Service Library Checkout:</strong> Books embedded with passive RFID tags (ISO 15693) are placed on an optical/RFID checkout platform. The reader scans the student card and all book tags simultaneously via anti-collision algorithms. The system updates book availability status, links item IDs to the student account, and deactivates security gates automatically[cite: 2].</li>
+            </ul>
+        </div>
+
+        <!-- Question 4 Solution -->
+        <div class="question-block">
+            <div class="question-header">
+                <span class="question-title">Solution 4: Comparative Breakdown of Computer Programming Languages</span>
+                <span class="bloom-badge">ANALYSIS / ANALYZING</span>
+            </div>
+            <p>Distinguish between low-level languages (Machine and Assembly) and high-level languages in terms of execution speed, hardware dependence, translation requirements, and programming complexity[cite: 2].</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comparison Dimension</th>
+                        <th>Machine Language (Low-Level)</th>
+                        <th>Assembly Language (Low-Level)</th>
+                        <th>High-Level Languages (HLL)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Execution Speed</strong></td>
+                        <td>Blazing/Instantaneous: Executed natively by the CPU without runtime translation[cite: 2].</td>
+                        <td>Near Native: Minimal overhead post single-pass assembly into binary[cite: 2].</td>
+                        <td>Slower: Requires overhead from interpreters/compilers and dynamic memory management[cite: 2].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hardware Dependence</strong></td>
+                        <td>100% Machine Dependent: Tied directly to the specific CPU Instruction Set Architecture (ISA)[cite: 2].</td>
+                        <td>Strictly Architecture Specific: Code written for x86 cannot run on ARM without rewriting[cite: 2].</td>
+                        <td>Hardware Independent (Portable): Source code compiles/runs across multiple platforms via JVM or native targets[cite: 2].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Translator Required</strong></td>
+                        <td>None: Raw binary 0s and 1s directly understood by logic gates[cite: 2].</td>
+                        <td>Assembler: Converts symbolic mnemonics (e.g., MOV, ADD) to machine code[cite: 2].</td>
+                        <td>Compiler/Interpreter: Translates entire source files or interprets line-by-line (Python)[cite: 2].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Programming Complexity</strong></td>
+                        <td>Extremely High: Error-prone, cryptic, non-human-readable numeric codes[cite: 2].</td>
+                        <td>High: Demands deep understanding of CPU registers, memory stacks, and flags[cite: 2].</td>
+                        <td>Low/Intuitive: Uses natural English-like syntax, rich mathematical notation, and auto-memory management[cite: 2].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Question 5 Solution -->
+        <div class="question-block">
+            <div class="question-header">
+                <span class="question-title">Solution 5: Point-and-Draw Devices vs. Graphics Digitizers</span>
+                <span class="bloom-badge">ANALYSIS / ANALYZING</span>
+            </div>
+            <p>Compare point-and-draw devices (such as a mouse and trackball) with graphics digitizers/drawing tablets, highlighting how their coordinate tracking mechanisms and pressure sensitivity differ for CAD and digital art applications[cite: 3].</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature / Parameter</th>
+                        <th>Point-and-Draw (Mouse / Trackball)</th>
+                        <th>Graphics Digitizers / Drawing Tablets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Coordinate Tracking</strong></td>
+                        <td><strong>Relative Positioning:</strong> Measures differential motion vectors (Δx, Δy). Lifting and repositioning the mouse does not move the screen cursor[cite: 3].</td>
+                        <td><strong>Absolute Positioning:</strong> Maps tablet surface points directly to display coordinates. Touching the top-right corner snaps the cursor exactly to the screen's top-right pixel[cite: 3].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sensory Mechanism</strong></td>
+                        <td>Optical/Laser sensors tracking surface micro-textures, or mechanical encoders tracking a rolling ball[cite: 3].</td>
+                        <td>Electromagnetic Resonance (EMR) or active capacitive grids tracking stylus proximity, tilt angle, and rotation[cite: 3].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pressure Sensitivity</strong></td>
+                        <td>None (Binary): Simple state clicks (Button Down / Button Up)[cite: 3].</td>
+                        <td>High Precision: 2,048 to 8,192 distinct pressure levels modulating pen tip force[cite: 3].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ideal Application Domain</strong></td>
+                        <td>Standard GUI & Basic CAD Navigation: Ideal for selecting discrete UI elements, panning, and clicking fixed geometric points[cite: 3].</td>
+                        <td>Digital Art & Advanced Parametric CAD: Essential for natural brush strokes, variable line weights, sculpting 3D meshes, and precision drafting[cite: 3].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Question 6 Solution -->
+        <div class="question-block">
+            <div class="question-header">
+                <span class="question-title">Solution 6: Plotters vs. UHD Monitor & Printer for Civil Engineering Blueprints</span>
+                <span class="bloom-badge">EVALUATION / EVALUATING</span>
+            </div>
+            <p>Assess whether a drum/flatbed plotter or an ultra-high-definition monitor and large-format printer combination is superior for producing civil engineering blueprints, justifying your selection based on line resolution, scalability, and long-term production costs[cite: 3].</p>
+            
+            <p><strong>Evaluation & Recommendation:</strong> For heavy-duty civil engineering blueprint production, the Drum/Flatbed Plotter remains superior over standard large-format raster printers, despite advancements in UHD display previewing[cite: 3].</p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Figure 6.1: Vector Physical Pathing (Plotter) vs. Pixel Grid Rasterization (Standard Inkjet Printer)[cite: 3]</div>
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 15px;">
+                    <div style="flex: 1; min-width: 250px; background: #e0f2fe; padding: 15px; border-radius: 6px;">
+                        <strong>Vector Plotter Rendering</strong><br>
+                        <hr style="border: 0; border-top: 2px solid #0284c7; margin: 8px 0;">
+                        <small>Continuous, smooth mathematical line pen path (Infinite scaling)</small>
+                    </div>
+                    <div style="flex: 1; min-width: 250px; background: #fee2e2; padding: 15px; border-radius: 6px;">
+                        <strong>Raster Large-Format Inkjet Rendering</strong><br>
+                        <hr style="border: 0; border-top: 2px dashed #dc2626; margin: 8px 0;">
+                        <small>Pixelated grid interpolation (DPI-bound blur/aliasing)</small>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Justification Metrics:</h3>
+            <ul>
+                <li><strong>Line Resolution & Sharpness:</strong> Civil blueprints demand continuous, sub-millimeter line fidelity for structural schematics. Plotters draw uninterrupted vector lines using physical pens/ink-heads driven by coordinate commands, preventing the edge-aliasing or pixel-blur common in raster inkjets[cite: 3].</li>
+                <li><strong>Scalability across Architectural Formats:</strong> Drum plotters handle continuous paper rolls (A0, ARCH E sizes) seamlessly, allowing multi-meter civil layout plans without page splitting or scale distortion[cite: 3].</li>
+                <li><strong>Long-Term Production Cost:</strong> High-volume inkjet printheads require frequent alignment, head cleaning, and expensive multi-color liquid cartridges. Plotters use high-capacity ink systems or physical drafting pens, substantially lowering the total cost per sheet (TCO) over long operational cycles[cite: 3].</li>
+            </ul>
+        </div>
+
+        <!-- Question 7 Solution -->
+        <div class="question-block">
+            <div class="question-header">
+                <span class="question-title">Solution 7: Operational Critique of Sensory Biometric Input Devices</span>
+                <span class="bloom-badge">EVALUATION / EVALUATING</span>
+            </div>
+            <p>Critique the operational reliability and security vulnerabilities of vision-input devices (facial recognition) compared to voice recognition devices when deployed as primary biometric authentication tools in high-ambient-noise, publicly exposed environments[cite: 4].</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Biometric Modality</th>
+                        <th>Operational Reliability under Adverse Conditions</th>
+                        <th>Security Vulnerabilities & Attack Vectors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Vision-Input Devices (Facial Recognition)</strong></td>
+                        <td><strong>High Resilience to Noise:</strong> Acoustic background noise has zero impact on optical camera sensors. Highly operational in chaotic public concourses[cite: 4].<br><br><em>Weakness:</em> Degrades under extreme darkness, glare, or severe face occlusions (masks/glasses)[cite: 4].</td>
+                        <td><strong>Spoofing Vulnerabilities:</strong> Susceptible to 2D photo presentation attacks, high-definition video playback, or 3D silicone mask spoofs unless paired with active Infrared (IR) liveness detection depth sensors[cite: 4].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Voice Recognition Devices (Acoustic Processing)</strong></td>
+                        <td><strong>Severe Degradation in Noise:</strong> Public background noise (crowds, traffic) collapses Signal-to-Noise Ratio (SNR), causing massive False Rejection Rates (FRR) even with directional microphone arrays and beamforming[cite: 4].</td>
+                        <td><strong>Replay & Synthetic Cloning Attacks:</strong> Vulnerable to recorded voice playback, spectral voice synthesis, and deepfake voice generation tools capable of matching vocal formants[cite: 4].</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 15px;"><strong>Conclusion:</strong> Vision-based input equipped with 3D structured light/IR liveness testing is substantially more reliable and secure for high-ambient-noise public installations than voice recognition[cite: 4].</p>
+        </div>
+
+        <!-- Question 8 Solution -->
+        <div class="question-block">
+            <div class="question-header">
+                <span class="question-title">Solution 8: System Design - Accessible Workstation for Visually Impaired Users</span>
+                <span class="bloom-badge">SYNTHESIS / CREATING</span>
+            </div>
+            <p>Design an accessible, hands-free computer workstation tailored for a visually impaired user. Propose a coherent integration of non-visual input devices with specialized output devices[cite: 4].</p>
+
+            <div class="diagram-container">
+                <div class="diagram-title">Figure 8.1: System Architecture of Integrated Accessible Workstation for Visually Impaired Users[cite: 4]</div>
+                <div style="font-weight: bold; color: var(--primary-color); margin-bottom: 5px;">NON-VISUAL INPUT LAYER</div>
+                <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <div class="diagram-box">Far-Field Mic Array<br><small>(Voice Command)</small></div>
+                    <div class="diagram-box">Tactile Braille Chord Keyboard</div>
+                    <div class="diagram-box">Foot Pedal Switch Assembly</div>
+                </div>
+                <div style="font-weight: bold; color: var(--secondary-color); margin: 10px 0;">↓</div>
+                <div style="font-weight: bold; color: var(--primary-color); margin-bottom: 5px;">ACCESSIBLE OS HUB</div>
+                <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <div class="diagram-box" style="background:#fef3c7; border-color:#fcd34d; color:#92400e;">NVDA/JAWS API Engine</div>
+                    <div class="diagram-box" style="background:#fef3c7; border-color:#fcd34d; color:#92400e;">Voice NLP Parser</div>
+                </div>
+                <div style="font-weight: bold; color: var(--secondary-color); margin: 10px 0;">↓</div>
+                <div style="font-weight: bold; color: var(--primary-color); margin-bottom: 5px;">MULTIMODAL OUTPUT LAYER</div>
+                <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                    <div class="diagram-box" style="background:#dcfce7; border-color:#86efac; color:#166534;">TTS Voice Response Synthesizer</div>
+                    <div class="diagram-box" style="background:#dcfce7; border-color:#86efac; color:#166534;">Refreshable Braille Display (80 Cell)</div>
+                    <div class="diagram-box" style="background:#dcfce7; border-color:#86efac; color:#166534;">Spatial Audio Haptic Headset</div>
+                </div>
+            </div>
+
+            <h3>System Integration & Workflow Synthesis:</h3>
+            <ul>
+                <li><strong>Input Subsystem Integration:</strong> Voice commands are captured by noise-canceling far-field microphone arrays for hands-free navigation and dictation. For tactile input, a refreshable Braille chord keyboard and tactile keys with distinct geometric reliefs allow fast error-free manual input. Foot pedals handle modifier keys (Shift/Ctrl)[cite: 4].</li>
+                <li><strong>Processing Core & Output Subsystem:</strong> The OS passes UI element trees directly to a screen reader engine (NVDA/JAWS). The engine synthesizes speech using high-speed Text-To-Speech (TTS) routed through spatial audio headphones, giving 3D spatial sound cues about window positions. Concurrently, a piezoelectric 80-cell Refreshable Braille Display renders active line text for physical tactile reading[cite: 4].</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>BPT-109 Solutions Unit 1 & 2 • Page 4 of 4[cite: 4]</p>
+    </footer>
+</div>
+
+</body>
+</html>
